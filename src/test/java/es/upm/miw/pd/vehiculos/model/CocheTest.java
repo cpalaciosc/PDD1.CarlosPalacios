@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import es.upm.miw.pd.vehiculos.util.Categoria;
 
-public class CocheTest {
+public class CocheTest extends VehiculoTest {
 	private Vehiculo coche;
 
 	@Before
@@ -28,5 +28,10 @@ public class CocheTest {
 	@Test
 	public void testPrecioDespuesSieteDias() {
 		assertEquals(72, this.coche.precio(9), 10e-2);
+	}
+
+	@Override
+	public Vehiculo getVehiculo(int id, String descripcion) {
+		return new Coche(id, descripcion, Categoria.A);
 	}		
 }

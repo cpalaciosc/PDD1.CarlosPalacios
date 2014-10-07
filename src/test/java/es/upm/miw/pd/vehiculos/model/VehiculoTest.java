@@ -5,35 +5,24 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class VehiculoTest {
-	
+public abstract class VehiculoTest {
+
+	public abstract Vehiculo getVehiculo(int id, String descripcion);
+
 	@Before
 	public void before() {
 	}
 
 	@Test
-	public void testVehiculo() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testPrecio() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testGetId() {
-		fail("Not yet implemented");
+		Vehiculo vehiculo = this.getVehiculo(1, "");
+		assertEquals(1, vehiculo.getId());
 	}
 
 	@Test
 	public void testGetDescripcion() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testToString() {
-		fail("Not yet implemented");
+		Vehiculo vehiculo = this.getVehiculo(1, "");
+		assertEquals("", vehiculo.getDescripcion());
 	}
 
 }

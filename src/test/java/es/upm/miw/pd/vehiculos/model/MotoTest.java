@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MotoTest {
+public class MotoTest extends VehiculoTest {
 	private Vehiculo moto;
 
 	@Before
@@ -21,6 +21,11 @@ public class MotoTest {
 	@Test
 	public void testPrecioMasUnaSemana() {
 		assertEquals(70, this.moto.precio(10), 10e-2);
+	}
+
+	@Override
+	public Vehiculo getVehiculo(int id, String descripcion) {
+		return new Moto(id, descripcion);
 	}
 
 }
