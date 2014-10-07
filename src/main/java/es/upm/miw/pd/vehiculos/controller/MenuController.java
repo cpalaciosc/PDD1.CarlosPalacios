@@ -1,5 +1,6 @@
 package es.upm.miw.pd.vehiculos.controller;
 
+import es.upm.miw.pd.vehiculos.forms.ConsultaVehiculoForm;
 import es.upm.miw.pd.vehiculos.model.Bicicleta;
 import es.upm.miw.pd.vehiculos.model.Coche;
 import es.upm.miw.pd.vehiculos.model.Moto;
@@ -34,7 +35,11 @@ public class MenuController {
 	}
 
 	public void consultarPrecio() {
-
+		ConsultaVehiculoForm consultaVehiculoForm = this.menuView.consultarPrecio();
+		Vehiculo vehiculo = this.vehiculosHandler.buscar(consultaVehiculoForm.getIdVehiculo());
+		double precio = this.vehiculosHandler.calcularPrecioAlquiler(consultaVehiculoForm.getIdVehiculo(), consultaVehiculoForm.getDiasAlquiler());
+		this.menuView.mostrarPrecioVehiculo(vehiculo.getDescripcion(), consultaVehiculoForm.getDiasAlquiler(), precio);
+		
 	}
 
 	private void ingresar(String tipoVehiculo) {
