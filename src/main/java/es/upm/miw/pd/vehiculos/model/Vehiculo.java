@@ -1,4 +1,4 @@
-package es.upm.miw.pd.vehiculos;
+package es.upm.miw.pd.vehiculos.model;
 
 public abstract class Vehiculo {
 	private int id;

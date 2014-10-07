@@ -1,4 +1,4 @@
-package es.upm.miw.pd.operaciones;
+package es.upm.miw.pd.operaciones.model;
 
 public class Subtraction  extends Operation {
     public Subtraction(final int operator1, final int operator2) {

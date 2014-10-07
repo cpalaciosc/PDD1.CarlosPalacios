@@ -1,5 +1,9 @@
 package es.upm.miw.pd.vehiculos;
 
+import es.upm.miw.pd.vehiculos.model.Bicicleta;
+import es.upm.miw.pd.vehiculos.model.Coche;
+import es.upm.miw.pd.vehiculos.model.Moto;
+import es.upm.miw.pd.vehiculos.model.VehiculosHandler;
 import es.upm.miw.pd.vehiculos.util.Categoria;
 
 public class VehiculosMain {

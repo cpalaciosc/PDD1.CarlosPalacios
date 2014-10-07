@@ -1,4 +1,4 @@
-package es.upm.miw.pd.vehiculos;
+package es.upm.miw.pd.vehiculos.model;
 
 import es.upm.miw.pd.vehiculos.util.Categoria;
 import es.upm.miw.pd.vehiculos.util.CocheTarifas;
@@ -42,19 +42,19 @@ public class Coche extends Vehiculo {
 
 	private double precioHastaTresDias(int diasAlquiler) {
 		return this.calcula(diasAlquiler,
-				CocheTarifas.ENTREUNOYTRES.getPorcentaje());
+				CocheTarifas.ENTREUNOYTRES.porcentaje);
 	}
 
 	private double precioHastaSieteDias(int diasAlquiler) {
 		return this.precioHastaTresDias(3)
 				+ this.calcula((diasAlquiler - 3),
-						CocheTarifas.ENTRECUATROYSIETE.getPorcentaje());
+						CocheTarifas.ENTRECUATROYSIETE.porcentaje);
 	}
 
 	private double precioDespuesSieteDias(int diasAlquiler) {
 		return this.precioHastaSieteDias(7)
 				+ this.calcula((diasAlquiler - 7),
-						CocheTarifas.RESTO.getPorcentaje());
+						CocheTarifas.RESTO.porcentaje);
 	}
 
 	private double calcula(int diasIntervalo, double porcentaje) {

@@ -1,4 +1,4 @@
-package es.upm.miw.pd.operaciones;
+package es.upm.miw.pd.operaciones.model;
 
 import java.util.ArrayList;
 

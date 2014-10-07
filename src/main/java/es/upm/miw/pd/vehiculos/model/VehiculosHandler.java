@@ -1,4 +1,4 @@
-package es.upm.miw.pd.vehiculos;
+package es.upm.miw.pd.vehiculos.model;
 
 import java.util.HashMap;
 
@@ -12,6 +12,10 @@ public class VehiculosHandler {
 	
 	public void agregar(Vehiculo vehiculo){
 		this.vehiculos.put(vehiculo.getId(), vehiculo);
+	}
+	
+	public int cantidadVehiculos(){
+		return this.vehiculos.size();
 	}
 	
 	public void listar(){

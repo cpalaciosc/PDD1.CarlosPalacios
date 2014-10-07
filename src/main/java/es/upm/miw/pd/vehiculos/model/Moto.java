@@ -1,4 +1,4 @@
-package es.upm.miw.pd.vehiculos;
+package es.upm.miw.pd.vehiculos.model;
 
 import es.upm.miw.pd.vehiculos.util.MotoTarifas;
 
@@ -12,9 +12,9 @@ public class Moto extends Vehiculo {
 	public double precio(int diasAlquiler) {
 		double precio = 0;
 		if (diasAlquiler >= 1 && diasAlquiler <= 6) {
-			precio = MotoTarifas.MENORQUESEMANA.getValor() * diasAlquiler;
+			precio = MotoTarifas.MENORQUESEMANA.valor * diasAlquiler;
 		} else if(diasAlquiler >=7) {
-			precio = MotoTarifas.MAYORIGUALQUESEMANA.getValor() * diasAlquiler;
+			precio = MotoTarifas.MAYORIGUALQUESEMANA.valor * diasAlquiler;
 		} else {
 			assert false : "Valor inesperado";
 		}
