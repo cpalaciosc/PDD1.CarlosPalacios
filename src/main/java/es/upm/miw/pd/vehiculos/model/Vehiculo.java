@@ -20,7 +20,7 @@ public abstract class Vehiculo {
 	}
 
 	public String toString() {
-		return "Vehiculo [tipo=" + this.getClass().getSimpleName() + " id="
+		return "[Vehiculo tipo=" + this.getClass().getSimpleName() + " id="
 				+ this.getId() + " descripcion=" + this.getDescripcion() + "]";
 	}
 }
