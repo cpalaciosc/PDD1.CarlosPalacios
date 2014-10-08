@@ -44,9 +44,7 @@ public class MenuController {
 
 	private void ingresar(String tipoVehiculo) {
 		Vehiculo vehiculo = this.menuView.ingresar(tipoVehiculo);
-		if (vehiculo != null) {
-			this.vehiculosHandler.agregar(vehiculo);
-		}
+		this.vehiculosHandler.agregar(vehiculo);
 		this.listar();
 	}
 

@@ -11,7 +11,9 @@ public class OperationsHandler {
 	}
 
 	public void add(Operation operator) {
-		this.operators.add(operator);
+		if(operator!=null){
+			this.operators.add(operator);
+		}
 	}
 
 	public void reset() {
