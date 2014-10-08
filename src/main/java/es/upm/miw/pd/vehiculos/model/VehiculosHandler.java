@@ -5,9 +5,17 @@ import java.util.HashMap;
 public class VehiculosHandler {
 
 	private HashMap<Integer, Vehiculo> vehiculos;
+	private static VehiculosHandler vehiculosHandler;
 
-	public VehiculosHandler() {
+	private VehiculosHandler() {
 		this.vehiculos = new HashMap<Integer, Vehiculo>();
+	}
+	
+	public static VehiculosHandler getInstance(){
+		if(vehiculosHandler==null){
+			vehiculosHandler = new VehiculosHandler();
+		}
+		return vehiculosHandler;
 	}
 
 	public void agregar(Vehiculo vehiculo) {
@@ -24,16 +32,5 @@ public class VehiculosHandler {
 
 	public Vehiculo buscar(int id) {
 		return this.vehiculos.get(id);
-	}
-
-	public double calcularPrecioAlquiler(int id, int diasAlquiler) {
-		Vehiculo vehiculo = this.buscar(id);
-		double precio = 0;
-		if (vehiculo != null) {
-			precio = vehiculo.precio(diasAlquiler);
-		} else {
-			assert false : "No se encontró vehiculo con ese id";
-		}
-		return precio;
 	}
 }
