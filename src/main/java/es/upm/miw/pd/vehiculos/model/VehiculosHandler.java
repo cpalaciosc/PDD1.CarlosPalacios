@@ -10,23 +10,25 @@ public class VehiculosHandler {
 	private VehiculosHandler() {
 		this.vehiculos = new HashMap<Integer, Vehiculo>();
 	}
-	
-	public static VehiculosHandler getInstance(){
-		if(vehiculosHandler==null){
+
+	public static VehiculosHandler getInstance() {
+		if (vehiculosHandler == null) {
 			vehiculosHandler = new VehiculosHandler();
 		}
 		return vehiculosHandler;
 	}
 
 	public void agregar(Vehiculo vehiculo) {
-		this.vehiculos.put(vehiculo.getId(), vehiculo);
+		if (vehiculo != null) {
+			this.vehiculos.put(vehiculo.getId(), vehiculo);
+		}
 	}
 
 	public int cantidadVehiculos() {
 		return this.vehiculos.size();
 	}
 
-	public String listar(){
+	public String listar() {
 		return this.vehiculos.values().toString();
 	}
 

@@ -12,7 +12,7 @@ public class AlquilerHandlerTest {
 	public void testCalcularPrecioAlquiler() {
 		VehiculosHandler.getInstance()
 				.agregar(new Coche(1, "Kia", Categoria.A));
-		assertEquals(72, new AlquilerHandler().calcularPrecioAlquiler(1, 9),
+		assertEquals(72, AlquilerHandler.getInstance().calcularPrecioAlquiler(1, 9),
 				10e-2);
 	}
 }
