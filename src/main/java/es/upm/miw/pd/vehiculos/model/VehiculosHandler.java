@@ -35,4 +35,8 @@ public class VehiculosHandler {
 	public Vehiculo buscar(int id) {
 		return this.vehiculos.get(id);
 	}
+	
+	public void limpiar(){
+		this.vehiculos.clear();
+	}
 }

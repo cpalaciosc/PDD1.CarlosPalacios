@@ -17,7 +17,7 @@ public class VehiculosHandlerTest {
 	@Test
 	public void testAgregar() {
 		this.vehiculosHandler.agregar(new Moto(8, "Yamaha"));
-		assertEquals(1, this.vehiculosHandler.cantidadVehiculos());
+		assertEquals("Yamaha", this.vehiculosHandler.buscar(8).getDescripcion());
 	}
 
 	@Test
